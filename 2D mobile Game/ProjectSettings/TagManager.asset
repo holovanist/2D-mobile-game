@@ -3,7 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-  tags: []
+  tags:
+  - Start
+  - Start Up
+  - Start Down
+  - Start Left
+  - Start Right
+  - Menu
   layers:
   - Default
   - TransparentFX
