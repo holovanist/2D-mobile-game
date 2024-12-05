@@ -7,8 +7,16 @@ using UnityEngine.SceneManagement;
 public class PlayerSceneTransfer : MonoBehaviour
 {
     GameObject SpawnPos;
+    GameObject SpawnPosUp;
+    GameObject SpawnPosDown;
+    GameObject SpawnPosLeft;
+    GameObject SpawnPosRight;
     GameObject menu;
     GameObject player;
+    int up;
+    int down;
+    int left;
+    int right;
 
     public string levelToLoad = "Logan 2";
     public bool OriginalPlayer = false;
@@ -17,14 +25,22 @@ public class PlayerSceneTransfer : MonoBehaviour
     void Start()
     {
 
-        menu = GameObject.FindGameObjectWithTag("menu");
         player = GameObject.FindGameObjectWithTag("Player");
-        SpawnPos = GameObject.FindGameObjectWithTag("Scene Start Point 1");
+        SpawnPosUp = GameObject.FindGameObjectWithTag("Start Up");
+        if (SpawnPosUp == null) { }
+        SpawnPosDown = GameObject.FindGameObjectWithTag("Start Down");
+        if (SpawnPosDown == null) { }
+        SpawnPosLeft = GameObject.FindGameObjectWithTag("Start Left");
+        if (SpawnPosLeft == null) { }
+        SpawnPosRight = GameObject.FindGameObjectWithTag("Start Right");
+        if (SpawnPosRight == null) { }
+        SpawnPos = GameObject.FindGameObjectWithTag("Start");
+        if (SpawnPos == null) { }
         if (player != null)
         {
             OriginalPlayer = true;
         }
-        menu = GameObject.FindGameObjectWithTag("menu");
+        menu = GameObject.FindGameObjectWithTag("Menu");
         if (menu != null)
         {
             GetComponent<SpriteRenderer>().enabled = false;
@@ -32,8 +48,8 @@ public class PlayerSceneTransfer : MonoBehaviour
         }
         if (menu == null)
         {
-            GetComponent<SpriteRenderer>().enabled = true;
-            GetComponentInChildren<Canvas>().enabled = true;
+            //GetComponent<SpriteRenderer>().enabled = true;
+            //GetComponentInChildren<Canvas>().enabled = true;
         }
     }
 
@@ -43,13 +59,15 @@ public class PlayerSceneTransfer : MonoBehaviour
             {
                 DontDestroyOnLoad(this.gameObject);
             }
-        SpawnPos = GameObject.FindGameObjectWithTag("Scene Start Point 1");
-        gameObject.transform.position = SpawnPos.transform.position;
+        SpawnPos = GameObject.FindGameObjectWithTag("Start");
+        if (SpawnPos == null) { }
+        else { gameObject.transform.position = SpawnPos.transform.position; }
     }
     private void OnLevelWasLoaded(int level)
     {
+       up = 0; down = 0; left = 0; right = 0;
         
-        menu = GameObject.FindGameObjectWithTag("menu");
+        menu = GameObject.FindGameObjectWithTag("Menu");
         if (menu != null)
         {
             GetComponent<SpriteRenderer>().enabled = false;
@@ -64,8 +82,36 @@ public class PlayerSceneTransfer : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        SpawnPos = GameObject.FindGameObjectWithTag("Scene Start Point 1");
-        gameObject.transform.position = SpawnPos.transform.position;
-        menu = GameObject.FindGameObjectWithTag("menu");
+        SpawnPosUp = GameObject.FindGameObjectWithTag("Start Up");
+        if (SpawnPosUp == null) { }
+        SpawnPosDown = GameObject.FindGameObjectWithTag("Start Down");
+        if (SpawnPosDown == null) { }
+        SpawnPosLeft = GameObject.FindGameObjectWithTag("Start Left");
+        if (SpawnPosLeft == null) { }
+        SpawnPosRight = GameObject.FindGameObjectWithTag("Start Right");
+        if (SpawnPosRight == null) { }
+        SpawnPos = GameObject.FindGameObjectWithTag("Start");
+        if (SpawnPos == null) { }
+        menu = GameObject.FindGameObjectWithTag("Menu");
+            if (menu == null) { }
+        if(up == 1)
+        { gameObject.transform.position = SpawnPosUp.transform.position; }
+        if (down == 1)
+        { gameObject.transform.position = SpawnPosDown.transform.position; }
+        if(left == 1)
+        { gameObject.transform.position = SpawnPosLeft.transform.position; }
+        if(right == 1)
+        { gameObject.transform.position = SpawnPosRight.transform.position; }
+    }
+    private void OnTriggerEnter2D(Collider2D coll)
+    {
+        if(coll.CompareTag("Up"))
+            {up = 1;}
+        if(coll.CompareTag("Down"))
+            {down = 1;}
+        if(coll.CompareTag("left"))
+            {left = 1;}
+        if (coll.CompareTag("right"))
+            {right = 1;}
     }
 }
