@@ -33,7 +33,7 @@ public class PlayerShoot1 : MonoBehaviour
                 //spawn in the bullet
                 GameObject bullet = Instantiate(prefab, transform.position, Quaternion.identity);
                 //Push the bullet towards the mouse
-                bullet.GetComponent<Rigidbody2D>().velocity = mouseDir * BulletSpeed;
+                bullet.GetComponent<Rigidbody2D>().linearVelocity = mouseDir * BulletSpeed;
                 Destroy(bullet, BulletLifetime);
             }
         }

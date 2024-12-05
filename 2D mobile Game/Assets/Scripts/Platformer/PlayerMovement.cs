@@ -33,7 +33,7 @@ public class PlayerMovement : MonoBehaviour
     void FixedUpdate()
     {
         moveInput = Input.GetAxisRaw("Horizontal");
-        rb.velocity = new Vector2 (moveInput * speed, rb.velocity.y);
+        rb.linearVelocity = new Vector2 (moveInput * speed, rb.linearVelocity.y);
     }
     private void Update()
     {
@@ -52,13 +52,13 @@ public class PlayerMovement : MonoBehaviour
         {
             IsJumping = true;
             JumptimeCounter = JumpTime;
-            rb.velocity = Vector2.up * JumpForce;
+            rb.linearVelocity = Vector2.up * JumpForce;
         }
         if (Input.GetKey(KeyCode.Space))
         {
             if (JumptimeCounter > 0 && IsJumping == true)
             {
-                rb.velocity = Vector2.up * JumpForce;
+                rb.linearVelocity = Vector2.up * JumpForce;
                 JumptimeCounter -= Time.deltaTime;
             }
             else

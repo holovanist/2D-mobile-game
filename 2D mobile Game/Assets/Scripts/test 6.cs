@@ -63,7 +63,7 @@ public class PlayerController : MonoBehaviour
         }
 
         // Wall sliding condition
-        if (isTouchingWall && !isGrounded && rb.velocity.y < 0)
+        if (isTouchingWall && !isGrounded && rb.linearVelocity.y < 0)
         {
             isWallSliding = true;
         }
@@ -83,7 +83,7 @@ public class PlayerController : MonoBehaviour
         else if (!isWallJumping)
         {
             // Regular movement
-            rb.velocity = new Vector2(horizontalInput * moveSpeed, rb.velocity.y);
+            rb.linearVelocity = new Vector2(horizontalInput * moveSpeed, rb.linearVelocity.y);
         }
     }
 
@@ -92,13 +92,13 @@ public class PlayerController : MonoBehaviour
         if (isWallSliding && !isGrounded)
         {
             // Stop horizontal movement when sliding on the wall
-            rb.velocity = new Vector2(0, rb.velocity.y);
+            rb.linearVelocity = new Vector2(0, rb.linearVelocity.y);
 
             // Ensure that sliding continues even near the top of the wall (avoiding stuck behavior)
-            if (rb.velocity.y < 0)
+            if (rb.linearVelocity.y < 0)
             {
                 // Apply wall sliding speed
-                rb.velocity = new Vector2(rb.velocity.x, Mathf.Max(rb.velocity.y, -wallSlideSpeed));
+                rb.linearVelocity = new Vector2(rb.linearVelocity.x, Mathf.Max(rb.linearVelocity.y, -wallSlideSpeed));
             }
         }
     }
@@ -117,22 +117,22 @@ public class PlayerController : MonoBehaviour
         }
 
         // Jump canceling - cancel upward velocity when jumping and pressing down
-        if (!isGrounded && !isWallSliding && rb.velocity.y > 0 && Input.GetButtonDown("Jump"))
+        if (!isGrounded && !isWallSliding && rb.linearVelocity.y > 0 && Input.GetButtonDown("Jump"))
         {
-            rb.velocity = new Vector2(rb.velocity.x, 0f); // Cancel jump
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0f); // Cancel jump
         }
     }
 
     private void Jump()
     {
-        rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+        rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
     }
 
     private void WallJump()
     {
         isWallJumping = true;
         Vector2 wallJumpDirection = isTouchingWall ? new Vector2(-horizontalInput, 1f).normalized : Vector2.up;
-        rb.velocity = new Vector2(wallJumpDirection.x * wallJumpForce, wallJumpDirection.y * wallJumpForce);
+        rb.linearVelocity = new Vector2(wallJumpDirection.x * wallJumpForce, wallJumpDirection.y * wallJumpForce);
         StartCoroutine(ResetWallJump());
     }
 
@@ -145,9 +145,9 @@ public class PlayerController : MonoBehaviour
     private void WallSlide()
     {
         // Apply wall slide effect to ensure the player continues sliding down even near the top of the wall
-        if (isWallSliding && rb.velocity.y < 0)
+        if (isWallSliding && rb.linearVelocity.y < 0)
         {
-            rb.velocity = new Vector2(rb.velocity.x, Mathf.Max(rb.velocity.y, -wallSlideSpeed));
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, Mathf.Max(rb.linearVelocity.y, -wallSlideSpeed));
         }
 
         // Prevent the player from getting stuck at the top by adjusting collider behavior

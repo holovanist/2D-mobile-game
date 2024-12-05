@@ -32,22 +32,22 @@ public class EnemyAI : MonoBehaviour
         {
             //move towards the player
             ChaseDir.Normalize();
-            rb.velocity = ChaseDir * chaseSpeed;
+            rb.linearVelocity = ChaseDir * chaseSpeed;
         }
         else if (goHome)
         {
             if (homeDir.magnitude < 0.1f)
             { 
                 transform.position = homePosition;
-                rb.velocity = Vector3.zero;
+                rb.linearVelocity = Vector3.zero;
             }
             homeDir.Normalize();
-            rb.velocity = homeDir * chaseSpeed;
+            rb.linearVelocity = homeDir * chaseSpeed;
         }
         else
         {
 
-            rb.velocity = Vector3.zero;
+            rb.linearVelocity = Vector3.zero;
         }
     }
 }

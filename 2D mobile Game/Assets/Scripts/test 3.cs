@@ -35,7 +35,7 @@ public class BasicEnemyAI : MonoBehaviour
         else
         {
             // No patrolling behavior, enemy just stays idle
-            rb.velocity = Vector2.zero; // Stop movement when not chasing
+            rb.linearVelocity = Vector2.zero; // Stop movement when not chasing
         }
     }
 
@@ -45,6 +45,6 @@ public class BasicEnemyAI : MonoBehaviour
         float direction = player.position.x > transform.position.x ? 1f : -1f;
 
         // Move towards the player on the x-axis
-        rb.velocity = new Vector2(direction * chaseSpeed, rb.velocity.y);
+        rb.linearVelocity = new Vector2(direction * chaseSpeed, rb.linearVelocity.y);
     }
 }

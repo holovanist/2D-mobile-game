@@ -28,9 +28,9 @@ public class EnemyPace : MonoBehaviour
     void Update()
     {
         timer += Time.deltaTime;
-        Vector3 vel = rb.velocity;
+        Vector3 vel = rb.linearVelocity;
         vel.x = paceDir * paceSpeed;
-        rb.velocity = vel;
+        rb.linearVelocity = vel;
         //the chase direction is destination - enemy starting position
         Vector3 playerPosition = player.transform.position;
         Vector3 ChaseDir = playerPosition - transform.position;
@@ -39,7 +39,7 @@ public class EnemyPace : MonoBehaviour
         {
             //move towards the player
             ChaseDir.Normalize();
-            rb.velocity = new Vector2(1, 0) * chaseSpeed * ChaseDir;
+            rb.linearVelocity = new Vector2(1, 0) * chaseSpeed * ChaseDir;
         }
         if (paceDir > 0)
         {

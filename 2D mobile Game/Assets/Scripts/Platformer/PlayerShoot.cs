@@ -106,7 +106,7 @@ public class PlayerShoot : MonoBehaviour
                 if (yInput != 0)
                 {
                     GameObject ybullet = Instantiate(FireballLv1Y, transform.position, Quaternion.identity);
-                    ybullet.GetComponent<Rigidbody2D>().velocity = new Vector2(0 , yInput) * BulletSpeed;
+                    ybullet.GetComponent<Rigidbody2D>().linearVelocity = new Vector2(0 , yInput) * BulletSpeed;
                     Destroy(ybullet, BulletLifetime);
                     if (lastInputY < 0 || yInput < 0)
                     {
@@ -117,7 +117,7 @@ public class PlayerShoot : MonoBehaviour
                 else if (xInput != 0)
                 {
                     GameObject xbullet = Instantiate(FireballLv1, transform.position, Quaternion.identity);
-                    xbullet.GetComponent<Rigidbody2D>().velocity = new Vector2(xInput, 0) * BulletSpeed;
+                    xbullet.GetComponent<Rigidbody2D>().linearVelocity = new Vector2(xInput, 0) * BulletSpeed;
                     if (lastInput < 0 || xInput < 0)
                     {
                        xbullet.GetComponent<SpriteRenderer>().flipX = true;
@@ -127,7 +127,7 @@ public class PlayerShoot : MonoBehaviour
                 else if (xInput == 0)
                 {
                     GameObject xbullet = Instantiate(FireballLv1, transform.position, Quaternion.identity);
-                    xbullet.GetComponent<Rigidbody2D>().velocity = new Vector2(lastInput, 0) * BulletSpeed;
+                    xbullet.GetComponent<Rigidbody2D>().linearVelocity = new Vector2(lastInput, 0) * BulletSpeed;
                     if (lastInput < 0 || xInput < 0)
                     {
                         xbullet.GetComponent<SpriteRenderer>().flipX = true;
@@ -153,7 +153,7 @@ public class PlayerShoot : MonoBehaviour
                 if (yInput != 0)
                 {
                     GameObject ybullet = Instantiate(FireballLv2Y, transform.position, Quaternion.identity);
-                    ybullet.GetComponent<Rigidbody2D>().velocity = new Vector2(0, yInput) * BulletSpeed;
+                    ybullet.GetComponent<Rigidbody2D>().linearVelocity = new Vector2(0, yInput) * BulletSpeed;
                     Destroy(ybullet, BulletLifetime);
                     if (lastInputY < 0 || yInput < 0)
                     {
@@ -163,7 +163,7 @@ public class PlayerShoot : MonoBehaviour
                 else if (xInput != 0)
                 {
                     GameObject xbullet = Instantiate(FireballLv2, transform.position, Quaternion.identity);
-                    xbullet.GetComponent<Rigidbody2D>().velocity = new Vector2(xInput, 0) * BulletSpeed;
+                    xbullet.GetComponent<Rigidbody2D>().linearVelocity = new Vector2(xInput, 0) * BulletSpeed;
                     if (lastInput < 0 || xInput < 0)
                     {
                         xbullet.GetComponent<SpriteRenderer>().flipX = true;
@@ -173,7 +173,7 @@ public class PlayerShoot : MonoBehaviour
                 else if (xInput == 0)
                 {
                     GameObject xbullet = Instantiate(FireballLv2, transform.position, Quaternion.identity);
-                    xbullet.GetComponent<Rigidbody2D>().velocity = new Vector2(lastInput, 0) * BulletSpeed;
+                    xbullet.GetComponent<Rigidbody2D>().linearVelocity = new Vector2(lastInput, 0) * BulletSpeed;
                     if (lastInput < 0 || xInput < 0)
                     {
                         xbullet.GetComponent<SpriteRenderer>().flipX = true;

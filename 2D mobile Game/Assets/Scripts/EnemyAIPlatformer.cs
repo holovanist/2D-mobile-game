@@ -30,22 +30,22 @@ public class EnemyAIPlatformer : MonoBehaviour
         {
             //move towards the player
             ChaseDir.Normalize();
-            GetComponent<Rigidbody2D>().velocity = ChaseDir * chaseSpeed;
+            GetComponent<Rigidbody2D>().linearVelocity = ChaseDir * chaseSpeed;
         }
         else if (goHome)
         {
             if (homeDir.magnitude < 0.1f)
             { 
                 transform.position = homePosition;
-                GetComponent<Rigidbody2D>().velocity = Vector3.zero;
+                GetComponent<Rigidbody2D>().linearVelocity = Vector3.zero;
             }
             homeDir.Normalize();
-            GetComponent<Rigidbody2D>().velocity = homeDir * chaseSpeed;
+            GetComponent<Rigidbody2D>().linearVelocity = homeDir * chaseSpeed;
         }
         else
         {
 
-            GetComponent<Rigidbody2D>().velocity = Vector3.zero;
+            GetComponent<Rigidbody2D>().linearVelocity = Vector3.zero;
         }
     }
 }

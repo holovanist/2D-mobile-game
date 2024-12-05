@@ -22,9 +22,9 @@ public class PlatformerMovement : MonoBehaviour
     void Update()
     {
         float moveX = Input.GetAxis("Horizontal");
-        Vector2 velocity = rb.velocity;
+        Vector2 velocity = rb.linearVelocity;
         velocity.x = moveX * moveSpeed;
-        rb.velocity = velocity;
+        rb.linearVelocity = velocity;
         //need to find a way to know if we are on the ground
         if (Input.GetButton("Jump") & grounded)
         {
