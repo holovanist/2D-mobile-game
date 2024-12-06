@@ -10,6 +10,11 @@ TagManager:
   - Start Left
   - Start Right
   - Menu
+  - Enemy
+  - Up
+  - Down
+  - Left
+  - Right
   layers:
   - Default
   - TransparentFX

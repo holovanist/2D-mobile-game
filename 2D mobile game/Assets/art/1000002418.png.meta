@@ -1,55 +1,22 @@
 fileFormatVersion: 2
-guid: 2b4c370054cba914189542899c42f2ad
+guid: bded5c4184ee300458376354fbd94e9f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4890600287706546840
-    second: Cog health_0
+      213: 206233088165681708
+    second: 1000002418_0
   - first:
-      213: -3937643130678200525
-    second: Cog health_1
+      213: -7039665622622143706
+    second: 1000002418_1
   - first:
-      213: 7661649555236006171
-    second: Cog health_2
+      213: -8625848230352855259
+    second: 1000002418_2
   - first:
-      213: -3065386454885837934
-    second: Cog health_3
+      213: -6241245986005854603
+    second: 1000002418_3
   - first:
-      213: -2266799904881334369
-    second: Cog health_4
-  - first:
-      213: -147814167976969392
-    second: Cog health_5
-  - first:
-      213: 4208024296013932967
-    second: Cog health_6
-  - first:
-      213: -5661452191058674026
-    second: Cog health_7
-  - first:
-      213: 6655385579848762800
-    second: Cog health_8
-  - first:
-      213: -1097137276591291440
-    second: Cog health_9
-  - first:
-      213: 4074871392506581307
-    second: Cog health_10
-  - first:
-      213: 490974908290890665
-    second: Cog health_11
-  - first:
-      213: -3716353295136650685
-    second: Cog health_12
-  - first:
-      213: 4277053146968412495
-    second: Cog health_13
-  - first:
-      213: -3039169458845005646
-    second: Cog health_14
-  - first:
-      213: -39605985371794916
-    second: Cog health_15
+      213: 1057658884021334363
+    second: 1000002418_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,7 +63,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 50
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -120,7 +87,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -141,17 +108,30 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Cog health_0
+      name: 1000002418_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 100
-        width: 100
-        height: 100
+        x: 12
+        y: 115
+        width: 26
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -160,20 +140,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8920c27dc07eed340800000000000000
-      internalID: 4890600287706546840
+      spriteID: c2a1c09a6efacd200800000000000000
+      internalID: 206233088165681708
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cog health_1
+      name: 1000002418_1
       rect:
         serializedVersion: 2
-        x: 100
-        y: 100
-        width: 100
-        height: 100
+        x: 58
+        y: 112
+        width: 34
+        height: 27
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -182,20 +162,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3373ba76f6eaa59c0800000000000000
-      internalID: -3937643130678200525
+      spriteID: 62bf31af9651e4e90800000000000000
+      internalID: -7039665622622143706
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cog health_2
+      name: 1000002418_2
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 100
-        height: 100
+        x: 11
+        y: 64
+        width: 15
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -204,8 +184,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b192f556da5a35a60800000000000000
-      internalID: 7661649555236006171
+      spriteID: 52fd2677cb4da4880800000000000000
+      internalID: -8625848230352855259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1000002418_3
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 54
+        width: 31
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 576d940e7d3a269a0800000000000000
+      internalID: -6241245986005854603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1000002418_4
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 6
+        width: 30
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b51b0abb62f8dae00800000000000000
+      internalID: 1057658884021334363
       vertices: []
       indices: 
       edges: []
@@ -214,7 +238,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: f7360c973eb52e447adcfe80fe1ec140
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -224,9 +248,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Cog health_0: 4890600287706546840
-      Cog health_1: -3937643130678200525
-      Cog health_2: 7661649555236006171
+      1000002418_0: 206233088165681708
+      1000002418_1: -7039665622622143706
+      1000002418_2: -8625848230352855259
+      1000002418_3: -6241245986005854603
+      1000002418_4: 1057658884021334363
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

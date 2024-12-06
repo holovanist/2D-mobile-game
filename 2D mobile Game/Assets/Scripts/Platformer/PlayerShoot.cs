@@ -35,16 +35,24 @@ public class PlayerShoot : MonoBehaviour
     float RechargeAmount;
     [SerializeField]
     float ManaUsage;
-
     [SerializeField]
     Image Manabar;
+
+    [SerializeField]
+    Image Healbar;
+    [SerializeField]
+    float HealUsage;
+    public float HealAmount;
+
+    PlayerHealth PlayerHealth;
 
     private UpgradeChecker UpgradeChecker;
     private void Start()
     {
+        PlayerHealth = GetComponent<PlayerHealth>();
         MaxMana = Mana;
         UpgradeChecker = GetComponent<UpgradeChecker>();
-        Manabar.fillAmount = Mana / MaxMana;
+        Manabar.fillAmount = Mana / MaxMana;    
         lastInput = -1;
     }
     // Update is called once per frame
@@ -124,23 +132,11 @@ public class PlayerShoot : MonoBehaviour
                     }
                     Destroy(xbullet, BulletLifetime);
                 }
-                else if (xInput == 0)
-                {
-                    GameObject xbullet = Instantiate(FireballLv1, transform.position, Quaternion.identity);
-                    xbullet.GetComponent<Rigidbody2D>().linearVelocity = new Vector2(lastInput, 0) * BulletSpeed;
-                    if (lastInput < 0 || xInput < 0)
-                    {
-                        xbullet.GetComponent<SpriteRenderer>().flipX = true;
-                    }
-                    Destroy(xbullet, BulletLifetime);
-                }
             }
         }
     }
     public void ATK2()
     {
-        yInput = Input.GetAxisRaw("Vertical");
-        xInput = Input.GetAxisRaw("Horizontal");
         if (Time.timeScale == 1)
         {
             timer += Time.deltaTime;
@@ -170,15 +166,20 @@ public class PlayerShoot : MonoBehaviour
                     }
                     Destroy(xbullet, BulletLifetime);
                 }
-                else if (xInput == 0)
+            }
+        }
+    }
+    public void Heal()
+    {
+        if (Time.timeScale == 1)
+        {
+            timer += Time.deltaTime;
+            if (Input.GetButton("Fire1"))
+            {    
+                if (yInput == 0 & xInput == 0)
                 {
-                    GameObject xbullet = Instantiate(FireballLv2, transform.position, Quaternion.identity);
-                    xbullet.GetComponent<Rigidbody2D>().linearVelocity = new Vector2(lastInput, 0) * BulletSpeed;
-                    if (lastInput < 0 || xInput < 0)
-                    {
-                        xbullet.GetComponent<SpriteRenderer>().flipX = true;
-                    }
-                    Destroy(xbullet, BulletLifetime);
+
+                    PlayerHealth.health += 2;
                 }
             }
         }

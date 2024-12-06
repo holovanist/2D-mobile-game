@@ -8,8 +8,8 @@ public class PlayerHealth : MonoBehaviour
 {
     //[SerializeField]
     //string levelToLoad = "Lose";
-    [SerializeField]
-    float health = 10f;
+
+    public float health = 10f;
 
     public float BaseMaxHealth { get; set; }
     [SerializeField]

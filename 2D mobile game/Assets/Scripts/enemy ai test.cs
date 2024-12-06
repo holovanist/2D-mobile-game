@@ -3,9 +3,8 @@ using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEngine;
 
-public class EnemyPace : MonoBehaviour
+public class EnemyPaceTest : MonoBehaviour
 {
-
     GameObject player;
     [SerializeField]
     float chaseSpeed = 5.0f;
@@ -15,8 +14,11 @@ public class EnemyPace : MonoBehaviour
     public float paceSpeed = 4;
     Rigidbody2D rb;
     float timer;
+    public float StopChaseTime = 2;
     //Animator anim;
-    // Start is called before the first frame update
+    bool isChasing = false;
+
+
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
@@ -24,42 +26,68 @@ public class EnemyPace : MonoBehaviour
         //anim = GetComponent<Animator>();
     }
 
-    // Update is called once per frame
     void Update()
     {
+        Vector3 playerPosition = player.transform.position;
+        Vector3 ChaseDir = playerPosition - transform.position;
+
+        if (ChaseDir.magnitude < ChaseRange)
+        {
+            isChasing = true;
+        }
         timer += Time.deltaTime;
+
+        if (isChasing & timer >= StopChaseTime)
+        {
+            ChasePlayer();
+        }
+        else
+        {
+            Patrol();
+        }
+    }
+
+    void ChasePlayer()
+    {
+        Vector3 playerPosition = player.transform.position;
+        Vector3 ChaseDir = playerPosition - transform.position;
+
+        if (ChaseDir.magnitude < ChaseRange)
+        {
+            // Move towards the player
+            ChaseDir.Normalize();
+            rb.linearVelocity = new Vector2(ChaseDir.x * chaseSpeed, rb.linearVelocity.y);
+            //anim.SetInteger("move", ChaseDir.x > 0 ? 1 : -1);
+        }
+        else
+        {
+            // Stop chasing when the player is out of range
+            isChasing = false;
+        }
+    }
+
+   
+    void Patrol()
+    {
         Vector3 vel = rb.linearVelocity;
         vel.x = paceDir * paceSpeed;
         rb.linearVelocity = vel;
-        //the chase direction is destination - enemy starting position
-        Vector3 playerPosition = player.transform.position;
-        Vector3 ChaseDir = playerPosition - transform.position;
-        
-        if (ChaseDir.magnitude < ChaseRange)
-        {
-            //move towards the player
-            rb.linearVelocity = new Vector2(1, 0) * chaseSpeed * ChaseDir;
-            ChaseDir.Normalize();
-        }
-        if (paceDir > 0)
-        {
-            //anim.SetInteger("move",1);
-        }
-        if (paceDir < 0)
-        {
-            //anim.SetInteger("move", -1);
-        }
+        //anim.SetInteger("move", paceDir > 0 ? 1 : -1);
     }
+
+    //anim.SetInteger("move", paceDir > 0 ? 1 : -1); // Return to the current patrol direction
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.layer == 3)
         {
+            isChasing = false;
             paceDir *= -1;
+            timer = 0;
         }
     }
     private void OnCollisionStay2D(Collision2D collision)
     {
-        if(collision.gameObject.CompareTag("Enemy") & timer >= 2)
+        if (collision.gameObject.CompareTag("Enemy") & timer >= 2)
         {
             timer = 0;
             paceDir *= -1;
@@ -67,7 +95,7 @@ public class EnemyPace : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player"))
         {
             //anim.SetFloat("atk", 2);
         }

@@ -106,12 +106,12 @@ public class PlayerSceneTransfer : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D coll)
     {
         if(coll.CompareTag("Up"))
-            {up = 1;}
+            {up = 1; down = 0; left = 0; right = 0;} else { }
         if(coll.CompareTag("Down"))
-            {down = 1;}
-        if(coll.CompareTag("left"))
-            {left = 1;}
-        if (coll.CompareTag("right"))
-            {right = 1;}
+            {down = 1; up = 0; left = 0; right = 0;} else { }
+        if(coll.CompareTag("Left"))
+            {left = 1; up = 0; down = 0; right = 0;} else { }
+        if (coll.CompareTag("Right"))
+            {right = 1; up = 0; left = 0; down = 0;} else { }
     }
 }
