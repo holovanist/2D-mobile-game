@@ -2,10 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.InputSystem;
-using UnityEngine.InputSystem.Controls;
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerMovement1 : MonoBehaviour
 {
     private Rigidbody2D rb;
     public float speed;
@@ -20,31 +18,25 @@ public class PlayerMovement : MonoBehaviour
     private float JumptimeCounter;
     public float JumpTime;
     private bool IsJumping;
-    //Animator anim;
+    Animator anim;
     [SerializeField]
-    InputActionReference moveActionReference;
-    [SerializeField]
-    InputActionReference jump;
     float timer;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        //anim = GetComponent<Animator>();
+        anim = GetComponent<Animator>();
     }
 
 
     void FixedUpdate()
     {
         moveInput = Input.GetAxisRaw("Horizontal");
-        rb.linearVelocity = new Vector2(moveInput * speed, rb.linearVelocity.y);
+        rb.linearVelocity = new Vector2 (moveInput * speed, rb.linearVelocity.y);
     }
     private void Update()
     {
-        if(JumptimeCounter > 0 && IsJumping == true)
-        {
-            JumptimeCounter -= Time.deltaTime;
-        }
-        /*if (Time.timeScale == 1)
+        
+        if (Time.timeScale == 1)
         {
             timer += Time.deltaTime;
             if (Input.GetButton("Fire1") && timer >= .5)
@@ -52,7 +44,7 @@ public class PlayerMovement : MonoBehaviour
                 timer = 0;
                 anim.SetTrigger("click");
             }
-        }*/
+        }
         isgrounded = Physics2D.OverlapCircle(feetPos.position, checkRadius, WhatIsGround);
         if (isgrounded == true && Input.GetKeyDown(KeyCode.Space))
         {
@@ -87,50 +79,24 @@ public class PlayerMovement : MonoBehaviour
         {
             GetComponent<SpriteRenderer>().flipX = true;
         }
-        anim.SetBool("upgrade", UpgradeChecker.FireballUpgrade);
-    */
+        anim.SetBool("upgrade", UpgradeChecker.FireballUpgrade);*/
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.layer == 3)
+        if (collision.gameObject.layer == 6)
         {
             isgrounded = false;
         }
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.gameObject.layer == 3)
+        if (collision.gameObject.layer == 6)
         {
             isgrounded = true;
         }
     }
-    public void Jump()
+    /*private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (isgrounded == true && jump || isgrounded == true && Input.GetKeyDown(KeyCode.Space))
-        {
-            IsJumping = true;
-            JumptimeCounter = JumpTime;
-            rb.linearVelocity = Vector2.up * JumpForce;
-        }
-        if (jump || Input.GetKeyDown(KeyCode.Space))
-        {
-            if (JumptimeCounter > 0 && IsJumping == true)
-            {
-                rb.linearVelocity = Vector2.up * JumpForce;
-                JumptimeCounter -= Time.deltaTime;
-            }
-            else
-            {
-                IsJumping = false;
-            }
-        }
-        if (jump)
-        {
-            IsJumping = false;
-        }
-    }
-    public void Timer()
-    {
-        JumptimeCounter = Time.deltaTime;
-    }
+        Debug.Log(collision);
+    }*/
 }
