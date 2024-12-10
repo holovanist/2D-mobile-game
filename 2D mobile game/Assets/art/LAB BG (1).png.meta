@@ -1,16 +1,10 @@
 fileFormatVersion: 2
-guid: abb212879335f3b4fa22ce7ed4c3146f
+guid: f6782953780b4e54d88f0973a98034d6
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1563197832332125447
-    second: LIght Bolt mana_0
-  - first:
-      213: 5565545552604899389
-    second: LIght Bolt mana_1
-  - first:
-      213: 8366395762518065150
-    second: LIght Bolt mana_2
+      213: -139291876348259169
+    second: LAB BG (1)_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -102,11 +96,90 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: LIght Bolt mana_0
+      name: LAB BG (1)_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 200
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f941a26c6c2211ef0800000000000000
+      internalID: -139291876348259169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LAB BG (1)_1
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 200
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b13c3fc052d6370449be0e352d43a2f8
+      internalID: 775598396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LAB BG (1)_2
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 200
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7821682bc966584eb46f5be9abae473
+      internalID: 428547720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LAB BG (1)_3
       rect:
         serializedVersion: 2
         x: 0
@@ -119,16 +192,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 70521d5752891b510800000000000000
-      internalID: 1563197832332125447
+      spriteID: fee27e3d18416c043a9beb4575060d01
+      internalID: -1228354670
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LIght Bolt mana_1
+      name: LAB BG (1)_4
       rect:
         serializedVersion: 2
         x: 100
@@ -141,16 +214,38 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: d38254c413acc3d40800000000000000
-      internalID: 5565545552604899389
+      spriteID: a7bcf7a11b3140e4baccbe7c134563b1
+      internalID: 672864045
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LIght Bolt mana_2
+      name: LAB BG (1)_5
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 100
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3861c70977da1644da4b057337f4ab7b
+      internalID: -1265838486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LAB BG (1)_6
       rect:
         serializedVersion: 2
         x: 0
@@ -163,10 +258,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: efff8337e986b1470800000000000000
-      internalID: 8366395762518065150
+      spriteID: 738d8e4b9c8a4f541ba53e00d851912c
+      internalID: -2002835678
       vertices: []
       indices: 
       edges: []
@@ -175,7 +270,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 9b7882a62932e4245b244240b0ce030b
+    spriteID: 01388ad3560e9af4f88f7cf078537700
     internalID: 0
     vertices: []
     indices: 
@@ -185,9 +280,13 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      LIght Bolt mana_0: 1563197832332125447
-      LIght Bolt mana_1: 5565545552604899389
-      LIght Bolt mana_2: 8366395762518065150
+      LAB BG (1)_0: -139291876348259169
+      LAB BG (1)_1: 775598396
+      LAB BG (1)_2: 428547720
+      LAB BG (1)_3: -1228354670
+      LAB BG (1)_4: 672864045
+      LAB BG (1)_5: -1265838486
+      LAB BG (1)_6: -2002835678
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

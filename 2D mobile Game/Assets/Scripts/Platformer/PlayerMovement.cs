@@ -25,7 +25,8 @@ public class PlayerMovement : MonoBehaviour
     InputActionReference moveActionReference;
     [SerializeField]
     InputActionReference jump;
-    float timer;
+     public bool hold;
+    //float timer;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -40,7 +41,7 @@ public class PlayerMovement : MonoBehaviour
     }
     private void Update()
     {
-        if(JumptimeCounter > 0 && IsJumping == true)
+        if(JumptimeCounter > 0 && IsJumping == true && hold == true)
         {
             JumptimeCounter -= Time.deltaTime;
         }
@@ -106,31 +107,38 @@ public class PlayerMovement : MonoBehaviour
     }
     public void Jump()
     {
-        if (isgrounded == true && jump || isgrounded == true && Input.GetKeyDown(KeyCode.Space))
+        hold = true;
+        if (isgrounded == true && jump)
         {
-            IsJumping = true;
-            JumptimeCounter = JumpTime;
+            IsJumping = false;
             rb.linearVelocity = Vector2.up * JumpForce;
+            Debug.Log("1a");
         }
-        if (jump || Input.GetKeyDown(KeyCode.Space))
+        if (jump)
         {
             if (JumptimeCounter > 0 && IsJumping == true)
             {
                 rb.linearVelocity = Vector2.up * JumpForce;
-                JumptimeCounter -= Time.deltaTime;
+                Debug.Log("1b");
             }
             else
             {
-                IsJumping = false;
+                IsJumping = false; Debug.Log("1c");
             }
+            Debug.Log("1d");
         }
         if (jump)
         {
             IsJumping = false;
+            Debug.Log("1e");
         }
+        JumptimeCounter = JumpTime;
+        Debug.Log("1f");
     }
     public void Timer()
     {
-        JumptimeCounter = Time.deltaTime;
+        hold = true;
+        JumptimeCounter -= Time.deltaTime;
+        Debug.Log("2");
     }
 }
