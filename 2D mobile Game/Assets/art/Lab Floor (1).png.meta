@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 95179ff1772b908499598a8427fc1ced
+guid: 73d4ef857ef10d84183e04f57536e8ae
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4361713924611770777
-    second: Lab Floor_0
+      213: -5631748010773225116
+    second: Lab Floor (1)_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,7 +100,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Lab Floor_0
+      name: Lab Floor (1)_0
       rect:
         serializedVersion: 2
         x: 0
@@ -115,14 +115,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9990c5084bbe78c30800000000000000
-      internalID: 4361713924611770777
+      spriteID: 4616951c50308d1b0800000000000000
+      internalID: -5631748010773225116
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lab Floor_1
+      name: Lab Floor (1)_1
       rect:
         serializedVersion: 2
         x: 32
@@ -137,14 +137,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 71fc3e63cf8cbfe478ad4fb3fb91a2e2
-      internalID: 1678978243
+      spriteID: d67eb2c3858f78c439ee24f09d37e0bc
+      internalID: -780434577
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lab Floor_2
+      name: Lab Floor (1)_2
       rect:
         serializedVersion: 2
         x: 64
@@ -159,14 +159,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c172cd80f2330cd4f994d7715f8f0a06
-      internalID: -1231663123
+      spriteID: 438d9133f1103824c963608d6c12daca
+      internalID: 1666799681
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lab Floor_3
+      name: Lab Floor (1)_3
       rect:
         serializedVersion: 2
         x: 0
@@ -181,14 +181,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8680da5de24441d4bb7db1a07a6827ca
-      internalID: -393547338
+      spriteID: 72483edd79a1cef40822ca81889bee44
+      internalID: -542215996
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lab Floor_4
+      name: Lab Floor (1)_4
       rect:
         serializedVersion: 2
         x: 32
@@ -203,14 +203,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 35e47b0df517c134dad0845b7b6bad95
-      internalID: 453880086
+      spriteID: c4e4f6a8b5cab0948a85f24c90ad7549
+      internalID: 1619183326
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lab Floor_5
+      name: Lab Floor (1)_5
       rect:
         serializedVersion: 2
         x: 64
@@ -225,14 +225,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4840ad03c238d6144bb05750d8291d74
-      internalID: 813057297
+      spriteID: 6eccee5b8369cb5409eeababeda8afba
+      internalID: 1744901992
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lab Floor_6
+      name: Lab Floor (1)_6
       rect:
         serializedVersion: 2
         x: 0
@@ -247,14 +247,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 01e52a292b6e85e4690cb5e93782b87e
-      internalID: -1389747697
+      spriteID: 7cb61014ee6ab2b4689796e077a2e62f
+      internalID: 1202284668
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lab Floor_7
+      name: Lab Floor (1)_7
       rect:
         serializedVersion: 2
         x: 32
@@ -269,8 +269,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e07fd4c37661f6b40bd4ddadf61092b5
-      internalID: 78482982
+      spriteID: 8a020b6415026f24f99d53068a5e82cb
+      internalID: 1115227386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lab Floor (1)_8
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7724183ab71a7bd40a9945a9c315551e
+      internalID: -665839508
       vertices: []
       indices: 
       edges: []
@@ -279,7 +301,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: b24f88576aeef25468f69a8b96c6f174
+    spriteID: cfde61ba149d4fe4b92523cf5a44ef12
     internalID: 0
     vertices: []
     indices: 
@@ -289,14 +311,15 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Lab Floor_0: 4361713924611770777
-      Lab Floor_1: 1678978243
-      Lab Floor_2: -1231663123
-      Lab Floor_3: -393547338
-      Lab Floor_4: 453880086
-      Lab Floor_5: 813057297
-      Lab Floor_6: -1389747697
-      Lab Floor_7: 78482982
+      Lab Floor (1)_0: -5631748010773225116
+      Lab Floor (1)_1: -780434577
+      Lab Floor (1)_2: 1666799681
+      Lab Floor (1)_3: -542215996
+      Lab Floor (1)_4: 1619183326
+      Lab Floor (1)_5: 1744901992
+      Lab Floor (1)_6: 1202284668
+      Lab Floor (1)_7: 1115227386
+      Lab Floor (1)_8: -665839508
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
