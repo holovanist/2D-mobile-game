@@ -631,6 +631,7 @@ GameObject:
   - component: {fileID: 507720830}
   - component: {fileID: 507720831}
   - component: {fileID: 507720832}
+  - component: {fileID: 507720833}
   m_Layer: 0
   m_Name: player test
   m_TagString: Player
@@ -790,7 +791,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 507720825}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 927325d8eb7fed940aba517a86dc94ff, type: 3}
   m_Name: 
@@ -804,7 +805,8 @@ MonoBehaviour:
     m_Bits: 8
   JumpTime: 0.3
   moveActionReference: {fileID: -1680190386980627800, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
-  jump: {fileID: 0}
+  jump: {fileID: -2099379676528639254, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
+  hold: 0
 --- !u!114 &507720831
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -839,6 +841,27 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   JumpTime: 0.3
+  timer: 0
+--- !u!114 &507720833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 507720825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a87cc614fafcd594689d6495fd213e26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+  JumpForce: 10
+  feetPos: {fileID: 1919535253}
+  checkRadius: 0.3
+  WhatIsGround:
+    serializedVersion: 2
+    m_Bits: 8
+  jumpTime: 0.3
   timer: 0
 --- !u!1 &955051794
 GameObject:
@@ -1021,6 +1044,7 @@ GameObject:
   - component: {fileID: 1212044105}
   - component: {fileID: 1212044104}
   - component: {fileID: 1212044107}
+  - component: {fileID: 1212044108}
   m_Layer: 5
   m_Name: down
   m_TagString: Untagged
@@ -1091,19 +1115,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1212044105}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 507720830}
-        m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
-        m_MethodName: Jump
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1212044105
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1187,6 +1199,19 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!114 &1212044108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1212044101}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d54531977ecb194c95e2d3aa7a5d72a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ControlPath: <Keyboard>/space
 --- !u!1 &1410956452
 GameObject:
   m_ObjectHideFlags: 0
@@ -2051,7 +2076,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9d677f1681015749b15c436eec6d880, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_MovementRange: 50
+  m_MovementRange: 100
   m_DynamicOriginRange: 100
   m_ControlPath: <Gamepad>/leftStick
   m_Behaviour: 0
