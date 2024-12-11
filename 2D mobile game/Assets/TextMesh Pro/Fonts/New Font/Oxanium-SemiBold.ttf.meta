@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e3265ab4bf004d28a9537516768c1c75
+guid: 549ce9cda3f156248a1b57e285b174b4
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -9,7 +9,7 @@ TrueTypeFontImporter:
   characterPadding: 1
   includeFontData: 1
   fontNames:
-  - Liberation Sans
+  - Oxanium
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0

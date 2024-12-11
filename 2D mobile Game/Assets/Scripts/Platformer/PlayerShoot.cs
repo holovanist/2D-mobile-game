@@ -1,8 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.XR;
 using UnityEngine.UI;
+using UnityEngine.InputSystem;
 
 public class PlayerShoot : MonoBehaviour
 {
@@ -22,11 +20,10 @@ public class PlayerShoot : MonoBehaviour
     float timer2 = 0;
     [SerializeField]
     float ShootDelay = 0.5f;
-    float xInput;
-    float yInput;
+    int xInput;
+    int yInput;
     public int lastInput;
     public int lastInputY;
-    int counter;
 
 
     public float Mana = 10;
@@ -38,22 +35,23 @@ public class PlayerShoot : MonoBehaviour
     [SerializeField]
     Image Manabar;
 
-    [SerializeField]
-    Image Healbar;
-    [SerializeField]
-    float HealUsage;
     public float HealAmount;
 
     PlayerHealth PlayerHealth;
 
-    private UpgradeChecker UpgradeChecker;
+    private @InputSystem_Actions playerInputActions;
+    private InputAction Attack;
+    private InputAction moveAction;
+
     private void Start()
     {
-        PlayerHealth = GetComponent<PlayerHealth>();
         MaxMana = Mana;
-        UpgradeChecker = GetComponent<UpgradeChecker>();
         Manabar.fillAmount = Mana / MaxMana;    
         lastInput = -1;
+        playerInputActions = new @InputSystem_Actions();
+        Attack = playerInputActions.Player.Attack;
+        moveAction = playerInputActions.Player.Move;
+
     }
     // Update is called once per frame
     void Update()
@@ -66,21 +64,10 @@ public class PlayerShoot : MonoBehaviour
             Mana += RechargeAmount;
             Manabar.fillAmount = Mana / MaxMana;
         }
-        if (UpgradeChecker.MaxManaIncrease == true && counter <1)
-        {
-            MaxMana *= 2;
-            counter++;
-        }
-        if (UpgradeChecker.FireballUpgrade == false)
-        {
-            ATK();
-        } 
-        else if (UpgradeChecker.FireballUpgrade == true)
-        {   
-            ATK2();
-        }
-        xInput = Input.GetAxisRaw("Horizontal");
-        yInput = Input.GetAxisRaw("Vertical");
+            ATK(); 
+        Vector2 moveInputVector = moveAction.ReadValue<Vector2>();
+        xInput = (int)moveInputVector.x;
+        yInput = (int)moveInputVector.y;
         if (xInput == 1)
         {
             lastInput = 1;
@@ -105,7 +92,7 @@ public class PlayerShoot : MonoBehaviour
         if (Time.timeScale == 1)
         {
             timer += Time.deltaTime; 
-            if (Input.GetButton("Fire1") && timer > ShootDelay && Mana >= 1)
+            if (Attack.triggered && timer > ShootDelay && Mana >= 1)
             {
                 timer = 0;
                 Mana -= ManaUsage;
@@ -135,46 +122,12 @@ public class PlayerShoot : MonoBehaviour
             }
         }
     }
-    public void ATK2()
-    {
-        if (Time.timeScale == 1)
-        {
-            timer += Time.deltaTime;
-            if (Input.GetButton("Fire1") && timer > ShootDelay)
-            {
-                timer = 0;
-                Mana -= ManaUsage;
-                Manabar.fillAmount = Mana / MaxMana;
-
-                if (yInput != 0)
-                {
-                    GameObject ybullet = Instantiate(FireballLv2Y, transform.position, Quaternion.identity);
-                    ybullet.GetComponent<Rigidbody2D>().linearVelocity = new Vector2(0, yInput) * BulletSpeed;
-                    Destroy(ybullet, BulletLifetime);
-                    if (lastInputY < 0 || yInput < 0)
-                    {
-                        ybullet.GetComponent<SpriteRenderer>().flipY = true;
-                    }
-                }
-                else if (xInput != 0)
-                {
-                    GameObject xbullet = Instantiate(FireballLv2, transform.position, Quaternion.identity);
-                    xbullet.GetComponent<Rigidbody2D>().linearVelocity = new Vector2(xInput, 0) * BulletSpeed;
-                    if (lastInput < 0 || xInput < 0)
-                    {
-                        xbullet.GetComponent<SpriteRenderer>().flipX = true;
-                    }
-                    Destroy(xbullet, BulletLifetime);
-                }
-            }
-        }
-    }
     public void Heal()
     {
         if (Time.timeScale == 1)
         {
             timer += Time.deltaTime;
-            if (Input.GetButton("Fire1"))
+            if (Attack.triggered)
             {    
                 if (yInput == 0 & xInput == 0)
                 {

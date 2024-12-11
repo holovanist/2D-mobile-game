@@ -1,144 +1,100 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.InputSystem;
-using UnityEngine.InputSystem.Controls;
+using UnityEngine.InputSystem; // Make sure to use the new Input System
 
-public class PlayerMovement2 : MonoBehaviour
+public class PlayerMovement : MonoBehaviour
 {
     private Rigidbody2D rb;
     public float speed;
     public float JumpForce;
     private float moveInput;
 
-    private bool isgrounded;
+    private bool isGrounded;
     public Transform feetPos;
     public float checkRadius;
     public LayerMask WhatIsGround;
 
-    private float JumptimeCounter;
-    public float JumpTime;
-    private bool IsJumping;
-    //Animator anim;
-    [SerializeField]
-    InputActionReference moveActionReference;
-    [SerializeField]
-    InputActionReference jump;
-     public bool hold;
-    //float timer;
+    private float jumpTimeCounter;
+    public float jumpTime;
+    private bool isJumping;
+    private bool stopjump;
+
+
+    private @InputSystem_Actions playerInputActions;
+    private InputAction moveAction;
+    private InputAction jumpAction;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        //anim = GetComponent<Animator>();
-    }
+        stopjump = false;
+        playerInputActions = new @InputSystem_Actions();
+        moveAction = playerInputActions.Player.Move;
+        jumpAction = playerInputActions.Player.Jump;
 
+        playerInputActions.Enable();
+    }
 
     void FixedUpdate()
     {
-        moveInput = Input.GetAxisRaw("Horizontal");
+        Vector2 moveInputVector = moveAction.ReadValue<Vector2>();
+        moveInput = moveInputVector.x;
+
         rb.linearVelocity = new Vector2(moveInput * speed, rb.linearVelocity.y);
     }
+
     private void Update()
     {
-        if(JumptimeCounter > 0 && IsJumping == true && hold == true)
+
+        isGrounded = Physics2D.OverlapCircle(feetPos.position, checkRadius, WhatIsGround);
+
+        if (isGrounded && jumpAction.triggered)
         {
-            JumptimeCounter -= Time.deltaTime;
-        }
-        /*if (Time.timeScale == 1)
-        {
-            timer += Time.deltaTime;
-            if (Input.GetButton("Fire1") && timer >= .5)
-            {
-                timer = 0;
-                anim.SetTrigger("click");
-            }
-        }*/
-        isgrounded = Physics2D.OverlapCircle(feetPos.position, checkRadius, WhatIsGround);
-        if (isgrounded == true && Input.GetKeyDown(KeyCode.Space))
-        {
-            IsJumping = true;
-            JumptimeCounter = JumpTime;
+            isJumping = true;
+            jumpTimeCounter = jumpTime;
             rb.linearVelocity = Vector2.up * JumpForce;
+            isGrounded = false;
         }
-        if (Input.GetKey(KeyCode.Space))
+
+        if (jumpAction.IsPressed() && isJumping && stopjump == false)
         {
-            if (JumptimeCounter > 0 && IsJumping == true)
+            if (jumpTimeCounter > 0)
             {
                 rb.linearVelocity = Vector2.up * JumpForce;
-                JumptimeCounter -= Time.deltaTime;
+                jumpTimeCounter -= Time.deltaTime;
             }
-            else
-            {
-                IsJumping = false;
-            }
-        }
-        if (Input.GetKeyUp(KeyCode.Space))
+        }else
         {
-            IsJumping = false;
+            stopjump = true;
         }
-        /*anim.SetBool("Grounded", isgrounded);
-        int x = (int)Input.GetAxisRaw("Horizontal");
-        anim.SetInteger("x", x);
-        if (x < 0)
+
+        if (isGrounded && !jumpAction.IsPressed())
         {
-            GetComponent<SpriteRenderer>().flipX = false;
+            isJumping = false;
+            stopjump = false;
         }
-        else if (x > 0)
-        {
-            GetComponent<SpriteRenderer>().flipX = true;
-        }
-        anim.SetBool("upgrade", UpgradeChecker.FireballUpgrade);
-    */
+
     }
+
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.layer == 3)
         {
-            isgrounded = false;
+            isGrounded = false;
         }
     }
+
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.gameObject.layer == 3)
         {
-            isgrounded = true;
+            isGrounded = true;
         }
     }
-    public void Jump()
+
+    private void OnDisable()
     {
-        hold = true;
-        if (isgrounded == true && jump)
-        {
-            IsJumping = false;
-            rb.linearVelocity = Vector2.up * JumpForce;
-            Debug.Log("1a");
-        }
-        if (jump)
-        {
-            if (JumptimeCounter > 0 && IsJumping == true)
-            {
-                rb.linearVelocity = Vector2.up * JumpForce;
-                Debug.Log("1b");
-            }
-            else
-            {
-                IsJumping = false; Debug.Log("1c");
-            }
-            Debug.Log("1d");
-        }
-        if (jump)
-        {
-            IsJumping = false;
-            Debug.Log("1e");
-        }
-        JumptimeCounter = JumpTime;
-        Debug.Log("1f");
-    }
-    public void Timer()
-    {
-        hold = true;
-        JumptimeCounter -= Time.deltaTime;
-        Debug.Log("2");
+        playerInputActions.Disable();
     }
 }

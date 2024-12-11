@@ -1,16 +1,97 @@
 fileFormatVersion: 2
-guid: abb212879335f3b4fa22ce7ed4c3146f
+guid: 8aeb61577d2a7d145ab9aed9972508d0
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1563197832332125447
-    second: LIght Bolt mana_0
+      213: 8802128482244095605
+    second: LIght Bolt mana 1_0
   - first:
-      213: 5565545552604899389
-    second: LIght Bolt mana_1
+      213: 6186211260264702339
+    second: LIght Bolt mana 1_1
   - first:
-      213: 8366395762518065150
-    second: LIght Bolt mana_2
+      213: 5983737306736374104
+    second: LIght Bolt mana 1_2
+  - first:
+      213: 2097241598467948850
+    second: LIght Bolt mana 1_3
+  - first:
+      213: -3053766300589589754
+    second: LIght Bolt mana 1_4
+  - first:
+      213: 8308596197212066294
+    second: LIght Bolt mana 1_5
+  - first:
+      213: -4357874558490820185
+    second: LIght Bolt mana 1_6
+  - first:
+      213: -3597972186753161842
+    second: LIght Bolt mana 1_7
+  - first:
+      213: 8060432763394425458
+    second: LIght Bolt mana 1_8
+  - first:
+      213: 4365005076387739448
+    second: LIght Bolt mana 1_9
+  - first:
+      213: 4382632736814747620
+    second: LIght Bolt mana 1_10
+  - first:
+      213: -962372695387482325
+    second: LIght Bolt mana 1_11
+  - first:
+      213: -5771971192792826933
+    second: LIght Bolt mana 1_12
+  - first:
+      213: -3681782775706646275
+    second: LIght Bolt mana 1_13
+  - first:
+      213: -7119661594121603466
+    second: LIght Bolt mana 1_14
+  - first:
+      213: -8852472337663834063
+    second: LIght Bolt mana 1_15
+  - first:
+      213: 8982588803972631129
+    second: LIght Bolt mana 1_16
+  - first:
+      213: 831340116608734838
+    second: LIght Bolt mana 1_17
+  - first:
+      213: -6096419195917606222
+    second: LIght Bolt mana 1_18
+  - first:
+      213: -2312711938068656359
+    second: LIght Bolt mana 1_19
+  - first:
+      213: 362017355385400867
+    second: LIght Bolt mana 1_20
+  - first:
+      213: 8007827565385313670
+    second: LIght Bolt mana 1_21
+  - first:
+      213: 5626365393344085926
+    second: LIght Bolt mana 1_22
+  - first:
+      213: -3735857708259740434
+    second: LIght Bolt mana 1_23
+  - first:
+      213: -5518392783902549329
+    second: LIght Bolt mana 1_24
+  - first:
+      213: -32425311352263819
+    second: LIght Bolt mana 1_25
+  - first:
+      213: 5289559756344169835
+    second: LIght Bolt mana 1_26
+  - first:
+      213: -1991971861586152369
+    second: LIght Bolt mana 1_27
+  - first:
+      213: -2243034757792048793
+    second: LIght Bolt mana 1_28
+  - first:
+      213: 4784720162645727024
+    second: LIght Bolt mana 1_29
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,8 +127,8 @@ TextureImporter:
     filterMode: 0
     aniso: 1
     mipBias: 0
-    wrapU: 0
-    wrapV: 0
+    wrapU: 1
+    wrapV: 1
     wrapW: 0
   nPOTScale: 0
   lightmap: 0
@@ -107,7 +188,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -119,12 +200,34 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: LIght Bolt mana_0
+      name: LIght Bolt mana 1_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 200
+        width: 1000
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57ee18b0831772a70800000000000000
+      internalID: 8802128482244095605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LIght Bolt mana 1_1
       rect:
         serializedVersion: 2
         x: 0
         y: 100
-        width: 100
+        width: 1000
         height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -134,41 +237,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 70521d5752891b510800000000000000
-      internalID: 1563197832332125447
+      spriteID: 38169918d56d9d550800000000000000
+      internalID: 6186211260264702339
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LIght Bolt mana_1
-      rect:
-        serializedVersion: 2
-        x: 100
-        y: 100
-        width: 100
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d38254c413acc3d40800000000000000
-      internalID: 5565545552604899389
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: LIght Bolt mana_2
+      name: LIght Bolt mana 1_2
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 100
+        width: 1000
         height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -178,8 +259,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: efff8337e986b1470800000000000000
-      internalID: 8366395762518065150
+      spriteID: 851364590618a0350800000000000000
+      internalID: 5983737306736374104
       vertices: []
       indices: 
       edges: []
@@ -188,7 +269,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 9b7882a62932e4245b244240b0ce030b
+    spriteID: 8f8ba44d83e829641b39396f8b22433a
     internalID: 0
     vertices: []
     indices: 
@@ -198,9 +279,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      LIght Bolt mana_0: 1563197832332125447
-      LIght Bolt mana_1: 5565545552604899389
-      LIght Bolt mana_2: 8366395762518065150
+      LIght Bolt mana 1_0: 8802128482244095605
+      LIght Bolt mana 1_1: 6186211260264702339
+      LIght Bolt mana 1_2: 5983737306736374104
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
