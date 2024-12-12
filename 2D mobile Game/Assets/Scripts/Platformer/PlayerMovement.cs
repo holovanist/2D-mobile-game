@@ -92,9 +92,4 @@ public class PlayerMovement : MonoBehaviour
             isGrounded = true;
         }
     }
-
-    private void OnDisable()
-    {
-        playerInputActions.Disable();
-    }
 }

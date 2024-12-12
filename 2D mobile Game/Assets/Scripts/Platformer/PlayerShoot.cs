@@ -42,9 +42,11 @@ public class PlayerShoot : MonoBehaviour
     private @InputSystem_Actions playerInputActions;
     private InputAction Attack;
     private InputAction moveAction;
+    public float HealTime;
 
     private void Start()
     {
+        PlayerHealth = GetComponent<PlayerHealth>();
         MaxMana = Mana;
         Manabar.fillAmount = Mana / MaxMana;    
         lastInput = -1;
@@ -127,12 +129,13 @@ public class PlayerShoot : MonoBehaviour
         if (Time.timeScale == 1)
         {
             timer += Time.deltaTime;
-            if (Attack.triggered)
-            {    
-                if (yInput == 0 & xInput == 0)
+            if (Attack.IsPressed())
+            {
+                HealTime = Time.deltaTime;
+                if (yInput == 0 && xInput == 0 && HealTime >= .25)
                 {
-
                     PlayerHealth.health += 2;
+                    HealTime = 0;
                 }
             }
         }

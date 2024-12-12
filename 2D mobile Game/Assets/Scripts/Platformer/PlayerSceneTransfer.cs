@@ -13,18 +13,17 @@ public class PlayerSceneTransfer : MonoBehaviour
     GameObject SpawnPosRight;
     GameObject menu;
     GameObject player;
-    int up;
-    int down;
-    int left;
-    int right;
+    public int up;
+    public int down;
+    public int left;
+    public int right;
 
     public string levelToLoad = "Logan 2";
-    public bool OriginalPlayer = false;
+    public bool OriginalPlayer {  get; private set; }
 
     // Start is called before the first frame update
     void Start()
     {
-
         player = GameObject.FindGameObjectWithTag("Player");
         SpawnPosUp = GameObject.FindGameObjectWithTag("Start Up");
         if (SpawnPosUp == null) { }
@@ -65,19 +64,8 @@ public class PlayerSceneTransfer : MonoBehaviour
     }
     private void OnLevelWasLoaded(int level)
     {
-       up = 0; down = 0; left = 0; right = 0;
+       
         
-        menu = GameObject.FindGameObjectWithTag("Menu");
-        if (menu != null)
-        {
-            GetComponent<SpriteRenderer>().enabled = false;
-            GetComponentInChildren<Canvas>().enabled = false;
-        }
-        if (menu == null)
-        {
-            GetComponent<SpriteRenderer>().enabled = true;
-            GetComponentInChildren<Canvas>().enabled = true;
-        }
         if (OriginalPlayer == false)
         {
             Destroy(gameObject);
@@ -102,6 +90,18 @@ public class PlayerSceneTransfer : MonoBehaviour
         { gameObject.transform.position = SpawnPosLeft.transform.position; }
         if(right == 1)
         { gameObject.transform.position = SpawnPosRight.transform.position; }
+        menu = GameObject.FindGameObjectWithTag("Menu");
+        /*if (menu != null)
+        {
+            GetComponent<SpriteRenderer>().enabled = false;
+            GetComponentInChildren<Canvas>().enabled = false;
+        }
+        if (menu == null)
+        {
+            GetComponent<SpriteRenderer>().enabled = true;
+            GetComponentInChildren<Canvas>().enabled = true;
+        }*/
+        up = 0; down = 0; left = 0; right = 0;
     }
     private void OnTriggerEnter2D(Collider2D coll)
     {
