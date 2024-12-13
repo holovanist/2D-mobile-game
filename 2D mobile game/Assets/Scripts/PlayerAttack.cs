@@ -87,7 +87,7 @@ public class PlayerAttack : MonoBehaviour
     private void OnDrawGizmosSelected()
     {
         Gizmos.DrawWireSphere(attackTransform.position, attackRange);
-    }
+    }   
 
     #region Animation Triggers
     public void DamageNowToTrue()
