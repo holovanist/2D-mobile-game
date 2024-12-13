@@ -39,7 +39,7 @@ public class PlayerShoot : MonoBehaviour
 
     PlayerHealth PlayerHealth;
 
-    private @InputSystem_Actions playerInputActions;
+    private Controls playerInputActions;
     private InputAction Attack;
     private InputAction moveAction;
     public float HealTime;
@@ -50,7 +50,7 @@ public class PlayerShoot : MonoBehaviour
         MaxMana = Mana;
         Manabar.fillAmount = Mana / MaxMana;    
         lastInput = -1;
-        playerInputActions = new @InputSystem_Actions();
+        playerInputActions = new Controls();
         Attack = playerInputActions.Player.Attack;
         moveAction = playerInputActions.Player.Move;
 

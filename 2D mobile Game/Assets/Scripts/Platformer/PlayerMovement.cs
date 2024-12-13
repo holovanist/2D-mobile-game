@@ -21,7 +21,7 @@ public class PlayerMovement : MonoBehaviour
     private bool stopjump;
 
 
-    private @InputSystem_Actions playerInputActions;
+    private Controls Controls;
     private InputAction moveAction;
     private InputAction jumpAction;
 
@@ -29,11 +29,11 @@ public class PlayerMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         stopjump = false;
-        playerInputActions = new @InputSystem_Actions();
-        moveAction = playerInputActions.Player.Move;
-        jumpAction = playerInputActions.Player.Jump;
+        Controls = new Controls();
+        moveAction = Controls.Player.Move;
+        jumpAction = Controls.Player.Jump;
 
-        playerInputActions.Enable();
+        Controls.Enable();
     }
 
     void FixedUpdate()
