@@ -1,52 +1,10 @@
 fileFormatVersion: 2
-guid: cc3120d4df0c3694480926c83ed0088e
+guid: 9f9e62cf4fb18254e89f66150aea7bf8
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1264772288087964892
-    second: healthBar_0
-  - first:
-      213: -1246487339369159825
-    second: healthBar_1
-  - first:
-      213: -6581021228822345160
-    second: healthBar_2
-  - first:
-      213: 5235216049511467275
-    second: healthBar_3
-  - first:
-      213: -7552136332903361755
-    second: healthBar_4
-  - first:
-      213: -3237176403118713384
-    second: healthBar_5
-  - first:
-      213: -8378351623246559817
-    second: healthBar_6
-  - first:
-      213: 2862982656841944581
-    second: healthBar_7
-  - first:
-      213: -2023636800237536137
-    second: healthBar_8
-  - first:
-      213: 8808383841745980431
-    second: healthBar_9
-  - first:
-      213: 414827086452463265
-    second: healthBar_10
-  - first:
-      213: -5786970126868546575
-    second: healthBar_11
-  - first:
-      213: -1423263115028918313
-    second: healthBar_12
-  - first:
-      213: -359513789824062384
-    second: healthBar_13
-  - first:
-      213: 3844360508017135398
-    second: healthBar_14
+      213: -2559957549947610196
+    second: lab floor fixed_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -79,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -93,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 50
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -117,7 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -142,57 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: healthBar_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 50
-        width: 50
-        height: 50
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 42342c61e40a27ee0800000000000000
-      internalID: -1264772288087964892
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: healthBar_1
-      rect:
-        serializedVersion: 2
-        x: 50
-        y: 50
-        width: 50
-        height: 50
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f6321e77e5693bee0800000000000000
-      internalID: -1246487339369159825
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: healthBar_2
+      name: lab floor fixed_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 50
-        height: 50
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -201,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 83a4db46f048ba4a0800000000000000
-      internalID: -6581021228822345160
+      spriteID: cab1b4beb24397cd0800000000000000
+      internalID: -2559957549947610196
       vertices: []
       indices: 
       edges: []
@@ -211,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: c88b3fdd6c1536046941da9dbf65b23d
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -220,10 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      healthBar_0: -1264772288087964892
-      healthBar_1: -1246487339369159825
-      healthBar_2: -6581021228822345160
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

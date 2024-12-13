@@ -1,55 +1,10 @@
 fileFormatVersion: 2
-guid: 2b4c370054cba914189542899c42f2ad
+guid: c2fa90f795c279144b37a36caa436dbe
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4890600287706546840
-    second: Cog health_0
-  - first:
-      213: -3937643130678200525
-    second: Cog health_1
-  - first:
-      213: 7661649555236006171
-    second: Cog health_2
-  - first:
-      213: -3065386454885837934
-    second: Cog health_3
-  - first:
-      213: -2266799904881334369
-    second: Cog health_4
-  - first:
-      213: -147814167976969392
-    second: Cog health_5
-  - first:
-      213: 4208024296013932967
-    second: Cog health_6
-  - first:
-      213: -5661452191058674026
-    second: Cog health_7
-  - first:
-      213: 6655385579848762800
-    second: Cog health_8
-  - first:
-      213: -1097137276591291440
-    second: Cog health_9
-  - first:
-      213: 4074871392506581307
-    second: Cog health_10
-  - first:
-      213: 490974908290890665
-    second: Cog health_11
-  - first:
-      213: -3716353295136650685
-    second: Cog health_12
-  - first:
-      213: 4277053146968412495
-    second: Cog health_13
-  - first:
-      213: -3039169458845005646
-    second: Cog health_14
-  - first:
-      213: -39605985371794916
-    second: Cog health_15
+      213: 4548320491759911352
+    second: healthBar (1)_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 50
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -120,7 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -141,30 +96,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Cog health_0
+      name: healthBar (1)_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 100
-        width: 100
-        height: 100
+        y: 50
+        width: 50
+        height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -173,52 +115,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8920c27dc07eed340800000000000000
-      internalID: 4890600287706546840
+      spriteID: 8b1caf3a361ee1f30800000000000000
+      internalID: 4548320491759911352
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cog health_1
+      name: healthBar (1)_1
       rect:
         serializedVersion: 2
-        x: 100
-        y: 100
-        width: 100
-        height: 100
+        x: 50
+        y: 50
+        width: 50
+        height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 3373ba76f6eaa59c0800000000000000
-      internalID: -3937643130678200525
+      spriteID: 27d8f3be9ffcb6c4b810a0b927bcdca2
+      internalID: -1093130594
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cog health_2
+      name: healthBar (1)_2
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 100
-        height: 100
+        width: 50
+        height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: b192f556da5a35a60800000000000000
-      internalID: 7661649555236006171
+      spriteID: 73bb51c8ebf2391419eaee35b314840a
+      internalID: 106191323
       vertices: []
       indices: 
       edges: []
@@ -227,7 +169,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: f7360c973eb52e447adcfe80fe1ec140
+    spriteID: 59f7fb5636e98b84d9e3a2310627e4af
     internalID: 0
     vertices: []
     indices: 
@@ -237,9 +179,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Cog health_0: 4890600287706546840
-      Cog health_1: -3937643130678200525
-      Cog health_2: 7661649555236006171
+      healthBar (1)_0: 4548320491759911352
+      healthBar (1)_1: -1093130594
+      healthBar (1)_2: 106191323
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
