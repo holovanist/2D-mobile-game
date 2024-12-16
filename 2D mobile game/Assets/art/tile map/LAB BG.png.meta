@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: f6782953780b4e54d88f0973a98034d6
+guid: 28c06380c471c6a4aaedb49eb16c5689
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -139291876348259169
-    second: LAB BG (1)_0
+      213: 1614915106242385602
+    second: LAB BG_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -101,7 +101,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -113,7 +113,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: LAB BG (1)_0
+      name: LAB BG_0
       rect:
         serializedVersion: 2
         x: 0
@@ -128,14 +128,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f941a26c6c2211ef0800000000000000
-      internalID: -139291876348259169
+      spriteID: 2c65df1abb4596610800000000000000
+      internalID: 1614915106242385602
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LAB BG (1)_1
+      name: LAB BG_1
       rect:
         serializedVersion: 2
         x: 100
@@ -150,14 +150,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b13c3fc052d6370449be0e352d43a2f8
-      internalID: 775598396
+      spriteID: 7698bc787348b5b4eac56238956c878a
+      internalID: 1818182483
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LAB BG (1)_2
+      name: LAB BG_2
       rect:
         serializedVersion: 2
         x: 200
@@ -172,14 +172,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c7821682bc966584eb46f5be9abae473
-      internalID: 428547720
+      spriteID: 7f05f03c339d3b64eb7b8828c4894518
+      internalID: 1797119330
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LAB BG (1)_3
+      name: LAB BG_3
       rect:
         serializedVersion: 2
         x: 0
@@ -194,14 +194,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fee27e3d18416c043a9beb4575060d01
-      internalID: -1228354670
+      spriteID: bec5b6b1410ecf940b9fee3a0b0b8b9e
+      internalID: 354798323
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LAB BG (1)_4
+      name: LAB BG_4
       rect:
         serializedVersion: 2
         x: 100
@@ -216,14 +216,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a7bcf7a11b3140e4baccbe7c134563b1
-      internalID: 672864045
+      spriteID: b388e8679b3de5a418ddf671bb73d7f0
+      internalID: 1520145528
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LAB BG (1)_5
+      name: LAB BG_5
       rect:
         serializedVersion: 2
         x: 200
@@ -238,14 +238,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3861c70977da1644da4b057337f4ab7b
-      internalID: -1265838486
+      spriteID: 46b9f5ce65357ba469b277b2b5761f8e
+      internalID: 1938238215
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LAB BG (1)_6
+      name: LAB BG_6
       rect:
         serializedVersion: 2
         x: 0
@@ -260,8 +260,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 738d8e4b9c8a4f541ba53e00d851912c
-      internalID: -2002835678
+      spriteID: a654ce9db14afc945ac70a63cd58549e
+      internalID: 1748443612
       vertices: []
       indices: 
       edges: []
@@ -270,7 +270,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 01388ad3560e9af4f88f7cf078537700
+    spriteID: ff18224663316b444b68ea03086a8f36
     internalID: 0
     vertices: []
     indices: 
@@ -280,13 +280,13 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      LAB BG (1)_0: -139291876348259169
-      LAB BG (1)_1: 775598396
-      LAB BG (1)_2: 428547720
-      LAB BG (1)_3: -1228354670
-      LAB BG (1)_4: 672864045
-      LAB BG (1)_5: -1265838486
-      LAB BG (1)_6: -2002835678
+      LAB BG_0: 1614915106242385602
+      LAB BG_1: 1818182483
+      LAB BG_2: 1797119330
+      LAB BG_3: 354798323
+      LAB BG_4: 1520145528
+      LAB BG_5: 1938238215
+      LAB BG_6: 1748443612
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
