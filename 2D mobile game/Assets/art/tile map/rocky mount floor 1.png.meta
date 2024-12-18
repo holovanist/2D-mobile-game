@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: 301f270def41d6e4e8367bef1cd93c7b
+guid: 6ee15a173128d1d45a41bdbba7543624
 TextureImporter:
   internalIDToNameTable:
   - first:
       213: 5018709251765727089
     second: rocky mount floor_0
-  - first:
-      213: 6893125642930606874
-    second: rocky mount floor_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -104,7 +101,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -120,7 +117,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 150
+        y: 100
         width: 50
         height: 50
       alignment: 0
@@ -142,7 +139,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 50
-        y: 150
+        y: 100
         width: 50
         height: 50
       alignment: 0
@@ -151,10 +148,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: a13d30b304d49af50800000000000000
-      internalID: 6893125642930606874
+      spriteID: c3edc894e3522f8438606b33bb18d359
+      internalID: -1559722162
       vertices: []
       indices: 
       edges: []
@@ -164,7 +161,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 100
-        y: 150
+        y: 100
         width: 50
         height: 50
       alignment: 0
@@ -175,8 +172,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: be3964ff8fb18514b9ea300de80596c2
-      internalID: 1871289470
+      spriteID: 923becbc7160090449992a628d74b588
+      internalID: 670208622
       vertices: []
       indices: 
       edges: []
@@ -186,7 +183,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 100
+        y: 50
         width: 50
         height: 50
       alignment: 0
@@ -197,8 +194,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0064ab2eb1b1bed4cb5ea64745d5ddef
-      internalID: 184103379
+      spriteID: 3ad99dd246092f342869b197572c3b3b
+      internalID: 254556276
       vertices: []
       indices: 
       edges: []
@@ -208,7 +205,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 50
-        y: 100
+        y: 50
         width: 50
         height: 50
       alignment: 0
@@ -219,8 +216,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5cb5ad2def6352444bc13d8a11d067d4
-      internalID: 125536522
+      spriteID: 77c894bd73b543947a6c75ecea46322d
+      internalID: -273709567
       vertices: []
       indices: 
       edges: []
@@ -230,7 +227,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 100
-        y: 100
+        y: 50
         width: 50
         height: 50
       alignment: 0
@@ -241,8 +238,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 35ed759fdb89d1e4693f8c27851dc3be
-      internalID: -1896686500
+      spriteID: 064b8420b6ec4be488479f61b5350fae
+      internalID: 861725824
       vertices: []
       indices: 
       edges: []
@@ -252,72 +249,6 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 50
-        width: 50
-        height: 50
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d2bda4a90ffbcc24c995d50c3192d862
-      internalID: 1564930358
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: rocky mount floor_7
-      rect:
-        serializedVersion: 2
-        x: 50
-        y: 50
-        width: 50
-        height: 50
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e082e3d329432e148a80f2feb6b691ca
-      internalID: 2096357159
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: rocky mount floor_8
-      rect:
-        serializedVersion: 2
-        x: 100
-        y: 50
-        width: 50
-        height: 50
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6e71a4b8bd9fa3848ad82235ac68f60f
-      internalID: -1747488689
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: rocky mount floor_9
-      rect:
-        serializedVersion: 2
-        x: 0
         y: 0
         width: 50
         height: 50
@@ -329,30 +260,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0c9945b7360c6f54eb3fdac3fa187cb9
-      internalID: -464426742
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: rocky mount floor_10
-      rect:
-        serializedVersion: 2
-        x: 50
-        y: 0
-        width: 50
-        height: 50
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 43007383795b83c4584889354ae5db32
-      internalID: -1366812466
+      spriteID: eba0927ed4720b341863ea754bef81e9
+      internalID: -344536926
       vertices: []
       indices: 
       edges: []
@@ -361,7 +270,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 848d961c5e76ca1449f5eb07eb52c799
+    spriteID: 48297aa78de1bca4fa2ceb6a8a53ddc5
     internalID: 0
     vertices: []
     indices: 
@@ -372,16 +281,12 @@ TextureImporter:
       entries: []
     nameFileIdTable:
       rocky mount floor_0: 5018709251765727089
-      rocky mount floor_1: 6893125642930606874
-      rocky mount floor_10: -1366812466
-      rocky mount floor_2: 1871289470
-      rocky mount floor_3: 184103379
-      rocky mount floor_4: 125536522
-      rocky mount floor_5: -1896686500
-      rocky mount floor_6: 1564930358
-      rocky mount floor_7: 2096357159
-      rocky mount floor_8: -1747488689
-      rocky mount floor_9: -464426742
+      rocky mount floor_1: -1559722162
+      rocky mount floor_2: 670208622
+      rocky mount floor_3: 254556276
+      rocky mount floor_4: -273709567
+      rocky mount floor_5: 861725824
+      rocky mount floor_6: -344536926
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

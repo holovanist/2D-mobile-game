@@ -18,7 +18,7 @@ public class PlayerSceneTransfer : MonoBehaviour
     public int left;
     public int right;
 
-    public string levelToLoad = "Logan 2";
+    public string levelToLoad = "level";
     public bool OriginalPlayer {  get; private set; }
 
     // Start is called before the first frame update

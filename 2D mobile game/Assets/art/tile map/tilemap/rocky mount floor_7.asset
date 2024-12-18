@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: WastelandsBG (1)_9
+  m_Name: rocky mount floor_7
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: -1535855626, guid: 7aec811f7f783eb47ae2e98dcf484823, type: 3}
+  m_Sprite: {fileID: 2096357159, guid: 301f270def41d6e4e8367bef1cd93c7b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1
