@@ -15,6 +15,9 @@ TagManager:
   - Down
   - Left
   - Right
+  - Mobile
+  - Boss
+  - EBullet
   layers:
   - Default
   - TransparentFX

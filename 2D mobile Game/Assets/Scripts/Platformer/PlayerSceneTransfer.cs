@@ -82,16 +82,19 @@ public class PlayerSceneTransfer : MonoBehaviour
         if (SpawnPos == null) { }
         menu = GameObject.FindGameObjectWithTag("Menu");
             if (menu == null) { }
-        if(up == 1)
+        if (up == 1)
         { gameObject.transform.position = SpawnPosUp.transform.position; }
-        if (down == 1)
+        else if (down == 1)
         { gameObject.transform.position = SpawnPosDown.transform.position; }
-        if(left == 1)
+        else if (left == 1)
         { gameObject.transform.position = SpawnPosLeft.transform.position; }
-        if(right == 1)
+        else if (right == 1)
         { gameObject.transform.position = SpawnPosRight.transform.position; }
+        else if (up == 0 && down == 0 && left == 0 && right == 0)
+        { gameObject.transform.position = SpawnPos.transform.position; }
+        else { }
         menu = GameObject.FindGameObjectWithTag("Menu");
-        /*if (menu != null)
+        if (menu != null)
         {
             GetComponent<SpriteRenderer>().enabled = false;
             GetComponentInChildren<Canvas>().enabled = false;
@@ -100,7 +103,7 @@ public class PlayerSceneTransfer : MonoBehaviour
         {
             GetComponent<SpriteRenderer>().enabled = true;
             GetComponentInChildren<Canvas>().enabled = true;
-        }*/
+        }
         up = 0; down = 0; left = 0; right = 0;
     }
     private void OnTriggerEnter2D(Collider2D coll)

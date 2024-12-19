@@ -20,17 +20,17 @@ public class PlayerMovement2 : MonoBehaviour
     private float JumptimeCounter;
     public float JumpTime;
     private bool IsJumping;
-    //Animator anim;
+    Animator anim;
     [SerializeField]
     InputActionReference moveActionReference;
     [SerializeField]
     InputActionReference jump;
      public bool hold;
-    //float timer;
+    float timer;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        //anim = GetComponent<Animator>();
+        anim = GetComponent<Animator>();
     }
 
 
@@ -45,7 +45,7 @@ public class PlayerMovement2 : MonoBehaviour
         {
             JumptimeCounter -= Time.deltaTime;
         }
-        /*if (Time.timeScale == 1)
+        if (Time.timeScale == 1)
         {
             timer += Time.deltaTime;
             if (Input.GetButton("Fire1") && timer >= .5)
@@ -53,7 +53,7 @@ public class PlayerMovement2 : MonoBehaviour
                 timer = 0;
                 anim.SetTrigger("click");
             }
-        }*/
+        }
         isgrounded = Physics2D.OverlapCircle(feetPos.position, checkRadius, WhatIsGround);
         if (isgrounded == true && Input.GetKeyDown(KeyCode.Space))
         {
@@ -77,7 +77,7 @@ public class PlayerMovement2 : MonoBehaviour
         {
             IsJumping = false;
         }
-        /*anim.SetBool("Grounded", isgrounded);
+        anim.SetBool("Grounded", isgrounded);
         int x = (int)Input.GetAxisRaw("Horizontal");
         anim.SetInteger("x", x);
         if (x < 0)
@@ -88,8 +88,7 @@ public class PlayerMovement2 : MonoBehaviour
         {
             GetComponent<SpriteRenderer>().flipX = true;
         }
-        anim.SetBool("upgrade", UpgradeChecker.FireballUpgrade);
-    */
+    
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
