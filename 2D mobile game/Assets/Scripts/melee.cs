@@ -13,6 +13,8 @@ public class PlayerAttack1 : MonoBehaviour
     [SerializeField] private float attackDelay = 0.15f;
     private float attacktimer;
 
+    private Animator anim;
+
     // Directional movement distances for the attack
     [SerializeField] private float attackMoveDistance = 0.5f;  // Distance the attack moves when held
     private Vector2 attackDirection;
@@ -24,6 +26,7 @@ public class PlayerAttack1 : MonoBehaviour
     private void Start()
     {
         attacktimer = attackDelay;
+        anim = GetComponent<Animator>();
     }
 
     private void Update()
@@ -43,6 +46,7 @@ public class PlayerAttack1 : MonoBehaviour
         {
             attacktimer = 0;
             StartCoroutine(Attack());
+            anim.SetTrigger("atk");
         }
 
         attacktimer += Time.deltaTime;
